@@ -60,7 +60,7 @@ void insertFront(NodePtr *head, info S){
     newNode->next = *head;
     *head = newNode; 
 }
-
+/*
 void insertEnd(NodePtr *head, info S){
 	
 	NodePtr newNode = malloc(sizeof(Node));
@@ -85,6 +85,22 @@ void insertEnd(NodePtr *head, info S){
 	current->next = newNode;
 
 }
+*/
+
+void insertEnd(NodePtr *head, info S){
+	
+	NodePtr newNode = malloc(sizeof(Node));
+	
+	newNode->studentInfo = S;
+	newNode->next = NULL;
+	
+	while (*head != NULL){
+		head = &(*head)->next;
+	}
+	
+	*head = newNode;
+}
+
 
 void insertPosition(NodePtr *head, info S, int pos){
 	
@@ -116,4 +132,3 @@ void displayList(NodePtr head){
         trav = trav->next;
     }
 }
-
