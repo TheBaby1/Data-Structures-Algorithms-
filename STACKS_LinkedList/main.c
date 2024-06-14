@@ -16,6 +16,9 @@ int main(){
 
     displayStack(head);
     visualizeStack(head);
+    
+    StackLinkedList newStack = getEven(head);
+    displayStack(&newStack);
 
     return 0;
 }
