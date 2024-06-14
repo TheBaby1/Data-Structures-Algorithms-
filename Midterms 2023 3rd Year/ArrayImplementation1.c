@@ -109,7 +109,7 @@ void deleteAtPosition(classRecord *record, int position) {
 
 void printClassRecord(classRecord *record) {
     for (int i = 0; i < record->studCount; i++) {
-        printf("Student %d: %s %s, Age: %d, ID: %d, Birthdate: %d/%d\n",
+        printf("Student yeah %d: %s %s, Age: %d, ID: %d, Birthdate: %d/%d\n",
                i + 1,
                record->studArray[i].name.fName,
                record->studArray[i].name.lName,
