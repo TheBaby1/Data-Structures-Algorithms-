@@ -17,4 +17,6 @@ int peek(StackLinkedList *head);
 void displayStack(StackLinkedList *head);
 void visualizeStack(StackLinkedList *head);
 
+StackLinkedList getEven(StackLinkedList **head);
+
 #endif
