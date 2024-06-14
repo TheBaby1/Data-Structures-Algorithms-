@@ -72,7 +72,6 @@ void displayStack(StackLinkedList *head){
     while (!isEmpty(newStack)){
         int top = peek(newStack);
         printf("%d \n", top);
-        push(&head, top);
         pop(&newStack);
     }
     
@@ -82,47 +81,14 @@ void displayStack(StackLinkedList *head){
 void visualizeStack(StackLinkedList *head){
 
     StackLinkedList *current = head;
-	int top = peek(head);
 
-    printf("Visualize Stack: \n");
+    printf("LIST: ");
     while (current != NULL){
         printf("%d ", current->data);
-        if (current->data == top){
-        	printf("%s", "<--- Top");
-		}
         current = current->next;
-        
-        printf("\n");
     }
 
     printf("\n");
-}
-
-StackLinkedList getEven(StackLinkedList **head){
-	
-	StackLinkedList *tempStack;
-	StackLinkedList *newStack;
-	
-	initStack(&tempStack);
-	initStack(&newStack);
-	
-	while (!isEmpty(*head)){
-		int top = peek(*head);
-		pop(head);
-		
-		if (top % 2 == 0){
-			push(&newStack, top);
-		} else {
-			push(&tempStack, top);
-		}
-	}
-	
-	while (!isEmpty(tempStack)){
-		push(head, peek(tempStack));
-		pop(&tempStack);
-	}
-	
-	return newStack;
 }
 
 
