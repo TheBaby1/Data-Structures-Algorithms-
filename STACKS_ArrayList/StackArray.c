@@ -123,10 +123,3 @@ StackArrayList getEven(StackArrayList *S){
 
 
 
-
-
-
-
-
-
-
