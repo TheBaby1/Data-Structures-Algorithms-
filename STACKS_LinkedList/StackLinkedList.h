@@ -9,6 +9,7 @@ typedef struct node {
 } StackLinkedList;
 
 void initStack(StackLinkedList **head);
+StackLinkedList *createStack();
 bool isEmpty(StackLinkedList *head);
 void push(StackLinkedList **head, int elem);
 void pop(StackLinkedList **head);
@@ -16,5 +17,7 @@ int peek(StackLinkedList *head);
 
 void displayStack(StackLinkedList *head);
 void visualizeStack(StackLinkedList *head);
+
+StackLinkedList *getEven(StackLinkedList **head);
 
 #endif

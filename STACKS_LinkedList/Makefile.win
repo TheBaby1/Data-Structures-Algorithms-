@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o StackLinkedList.o
-LINKOBJ  = main.o StackLinkedList.o
+OBJ      = ../QUEUES_LinkedList/main.o ../QUEUES_LinkedList/QueuesLinkedList.o
+LINKOBJ  = ../QUEUES_LinkedList/main.o ../QUEUES_LinkedList/QueuesLinkedList.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,8 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main.o: main.c
-	$(CC) -c main.c -o main.o $(CFLAGS)
+../QUEUES_LinkedList/main.o: ../QUEUES_LinkedList/main.c
+	$(CC) -c ../QUEUES_LinkedList/main.c -o ../QUEUES_LinkedList/main.o $(CFLAGS)
 
-StackLinkedList.o: StackLinkedList.c
-	$(CC) -c StackLinkedList.c -o StackLinkedList.o $(CFLAGS)
+../QUEUES_LinkedList/QueuesLinkedList.o: ../QUEUES_LinkedList/QueuesLinkedList.c
+	$(CC) -c ../QUEUES_LinkedList/QueuesLinkedList.c -o ../QUEUES_LinkedList/QueuesLinkedList.o $(CFLAGS)
