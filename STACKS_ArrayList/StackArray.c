@@ -122,4 +122,3 @@ StackArrayList getEven(StackArrayList *S){
 
 
 
-
